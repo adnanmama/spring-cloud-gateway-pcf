@@ -1,0 +1,22 @@
+spring:
+  security:
+    user:
+      password: pass123
+  application:
+    name: gateway-service
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          lower-case-service-id: true
+          enabled: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9080/eureka
+
+management:
+  endpoint:
+    service-registry:
+      enabled: true
